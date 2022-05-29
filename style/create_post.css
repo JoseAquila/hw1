@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-color: black;
+}
+nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+}
+#links{
+  margin-top: 0;
+  margin-right: 40px;
+}
+a{
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+a.button{
+  color: white;
+  padding: 10px 15px;
+  border: 2px solid white;
+  border-radius: 100px;
+  text-decoration: none;
+}
+a.button:hover {
+  background-color: white;
+  color: black;
+}
+    
+    
+header {
+  background-image: url(../images/copertina.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 480px;
+  position: relative;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+}
+header nav h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+
+#container{
+  width: 350px;
+  height: 130px;
+  padding: 16px;
+  background-color: white;
+  border: 2px solid rgba(26, 26, 26, .7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -100px;
+  z-index: 1;
+  position: relative;
+  border-radius: 30px;
+}
+main #containerGif{
+  display: none;
+}
+#newpost {
+    width: 80%;
+    padding: 10px 0;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#newpost label {
+  font-size: 14px;
+  background: rgba(24, 24, 24, 0.867);
+  color: white;
+  padding: 8px 12px;
+  margin: 3px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+#newpost label:hover {
+    color: white;
+    background-color: black;
+}
+
+#newpost input[type=text] {
+    opacity: 0;
+}
+
+.hidden{
+  display: none !important;
+}
+ 
+.modal_contents{
+  display: none;
+}
+
+.plus{
+  height : 250px !important;
+  width: 400px !important;
+}
+
+.btn_hidden{
+  display: none !important;
+}
+
+#dispatch_result_fail{
+  display: flex;
+  flex-direction: column;
+
+}
+a.button_fail{
+
+  color: black;
+  padding: 10px 15px;
+  border: 2px solid black;
+  border-radius: 100px;
+  text-decoration: none;
+}
+a.button:hover {
+    background-color: black;
+    color: white;
+}
+
+
+button#think{
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  height: 30px;
+}
+button#think:hover{
+  background-color: white;
+  color: black;
+  border : 2px solid black;
+  border-radius: 10px;
+  height: 30px;
+}
+
+.invia_post{
+  display: flex;
+  flex-direction: column;
+}
+.invia_post input{
+  margin-top: 5px;
+  background-color: rgb(2, 72, 2);
+  color:white;
+  border-radius: 13px;
+  height: 40px;
+}
+.invia_post input:hover{
+  margin-top: 5px;
+  background-color: rgba(1, 29, 1, 0.97);
+  color:white;
+  border-radius: 13px;
+  height: 40px;
+}
+
+
+@media (max-width: 625px) {
+  header {
+    height: 300px;
+    line-height: 1.2;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  #links {
+    display: none;
+  }
+}

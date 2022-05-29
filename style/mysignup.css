@@ -1,0 +1,199 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-image: url(../images/campo.jpg);
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+main.login{
+  color:rgb(48, 47, 47);
+  background-color: white;
+  width: 35%;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid rgb(94, 101, 85);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);/*x l ombra sotto il box*/
+}
+main.signup{
+  color:rgb(48, 47, 47);
+  background-color: white;
+  width: 35%;
+  height: 75%;/*rispeto al contenitore*/
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 4px;
+  border: 1px solid rgb(94, 101, 85);
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.9);
+}
+
+form div input:focus::-webkit-input-placeholder { /*x il suggerimento nell inserire i campi, nella login*/
+  font-size: 10px;
+  position:relative;
+  top:-12px;
+}
+
+.box_signup, .box_signin{
+  text-align: center; 
+}
+
+button {
+  background:#067a31;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 4px;
+  margin: 8px 0;
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+input[type=text], input[type=password]{
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 0;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+form[name=login] div {
+  margin-bottom: 10px;
+}
+
+a {
+  color: rgb(45, 150, 255);
+}
+
+h1 {
+  color: rgba(26, 26, 26, .7);
+  text-align: center;
+  font-size: 21px;
+  border-bottom: 1px solid rgb(123, 122, 122);
+}
+
+
+.signup h1{
+  color: rgba(26, 26, 26, .7);
+  text-align: center;
+  font-size: 21px;
+  border-bottom: 1px solid rgb(123, 122, 122);
+}
+.names {/*x nome e cognome nello stesso ripiano*/
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+  margin: 0;
+}
+
+#submit{/*tasto registrati*/
+  background:#067a31;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  padding: 14px 20px;
+  border-radius: 4px;
+  margin: 8px 0;
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+main .signup {
+  font-size: 14px;
+}
+.signup {
+  height:100%;/*imposto l altezza pari al 100 percento del suo contenitore che è il main*/
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.signup input[type=text], .signup input[type=password]{
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 0;
+  background: #f1f1f1;
+}
+
+.signup input[type=text]:focus,.signup input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.allow > div{
+  display: inline-block;
+}
+.allow input{/*x il checkbox*/
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  border-radius: 4px;
+  position: relative;
+  border: 2px solid #d9d9d9;
+}
+form[name=signup]{
+  margin-top: 40px;
+}
+
+main .error {/*errore nella pagina di login*/
+  padding: 4px 10px;
+  color: #9e5158;
+  margin: 5px;
+  font-size: 12px;
+  display: inline-block;
+}
+
+form span {
+  opacity: 0;
+  font-size: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.errorj span {/*span che segnala l errore*/
+  opacity: 1;/*cosi' mostro lo span di errore*/
+  font-size: 10px;
+  color: #9e5158;
+}
+
+
+
+@media (max-width: 625px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+

@@ -1,0 +1,384 @@
+  /*Josè Luis Aquila - 1000001097*/
+  :root {
+    --like: url(../assets/like.svg);
+    --liked: url(../assets/like_d.svg);
+    --like_h: url(../assets/like_h.svg);
+
+    --comment: url(../assets/comment.svg);
+    --comment_h: url(../assets/comment_h.svg);
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background-color: rgba(241, 240, 240, 0.929);
+}
+nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
+}
+#links{
+  margin-top: 0;
+  margin-right: 40px;
+}
+#links a {
+  font-weight: bold;
+  font-size: 15px;
+  padding: 5px 15px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+a.button{
+color: white;
+padding: 10px 15px;
+border: 2px solid white;
+border-radius: 100px;
+text-decoration: none;
+}
+a.button:hover {
+    background-color: white;
+    color: black;
+}
+  
+  
+header {
+  background-image: url(../images/copertina.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 280px;
+  position: relative;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+}
+header nav h1{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 40px;
+}
+  
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color:whitesmoke;
+  font-style: italic;
+  bottom:0;
+  width:100%;
+}
+
+/*prima sezione homepage*/
+
+section#post{
+  display: flex;
+  flex-direction: column;
+}
+
+#post a {
+  width: 100px;
+  color:black;
+  border: 2px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+}
+#post a.button:hover {
+  color:white;
+  background-color: black;
+}
+
+#casetta{
+  height: 40px;
+  width: 40px;
+  margin-top: 20px;
+}
+#homepage{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hidden{
+  display: none;
+}
+
+/*post*/
+
+.post {
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  margin-bottom: 14px;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: row; 
+  justify-content: left;
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+.userinfo .names {
+  flex-grow: 1;
+}
+
+.userinfo .username {
+  font-size: 14px;
+}
+
+.userinfo .name {
+  color: rgba(0, 0, 0, 0.821);
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.userinfo a {
+  text-decoration: none;
+  color: rgba(118, 114, 114, 0.975);
+}
+.post .text {
+  font-size: 15px;
+  margin-top: 12px;
+  text-align: justify;
+  margin-bottom: 5px;
+  white-space: pre-wrap;
+  color: rgba(118, 114, 114, 0.975);
+}
+
+.post .time {
+  margin-left: auto;
+  font-size: 14px;
+  color: #b2b2b2;
+  padding-left: 10px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 13px;
+}
+
+.post .like, .post .comment, .post .liked {
+  margin-left: 7px;
+  cursor: pointer;
+  background-color: #e3e3e3 !important;
+  border-radius: 3px; 
+}
+
+.post .like {
+  background: var(--like) 8px center no-repeat;
+  background-size: 15px;
+  color:#7a7878
+}
+
+.post .like:hover, .post .comment:hover {
+  color: black;
+}
+
+
+
+.post .liked {
+  background: var(--liked) 8px center no-repeat;
+  background-size: 17px;
+  color: #f60d28;
+}
+
+.post .like, .post .liked {
+  padding-left: 30px;
+}
+
+.post .like span, .post .liked span {
+  padding: 5px  10px  5px 0;
+  display: inline-block;
+}
+
+.post .like:hover {
+  background: var(--like_h) 8px center no-repeat ;
+  background-size: 17px;
+}
+
+.post .comment {
+  padding: 5px  10px  5px 30px;
+  background: var(--comment) 8px center no-repeat ;
+  background-size: 17px;
+}
+
+.post .comment:hover {
+  background: var(--comment_h) 8px center no-repeat ;
+  background-size: 17px;
+}
+
+
+
+.post .action {
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 5px;
+}
+
+.post.text > .text {
+  font-size: 17px;
+  text-align: left;
+}
+
+.post.text .content {
+  display: none;
+}
+
+/* COMMENTI */
+
+.comments {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+.comments form {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.commento{
+  border-bottom: 1px solid rgb(201, 201, 201);
+}
+
+.comments input[type=text] {
+  width: 100%;
+  padding: 7px;
+  border-radius: 4px;
+  color: #aa8c8c;
+  box-shadow: none;
+  border: 2px solid;
+  padding-right: 35px;
+}
+
+.comments input[type=submit] {
+  display: none;
+}
+
+.comments .past_messages {
+  max-height: 171px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 4px;
+  border-top: 2px solid rgb(215, 214, 214);
+  margin-top: 10px;
+}
+
+/*modale likes , persone a cui piace*/
+
+#modal.hidden{
+  display: none !important;
+}
+
+#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+#modal .window {
+  border-radius: 7px;
+  background: white;
+  padding: 12px;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  width: 300px;
+}
+
+#modal span {
+  padding-top: 15px;
+}
+
+#modal .modal_desc {
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.window{
+  display: flex;
+  flex-direction: column;
+}
+.window button{
+  background-color: rgb(45, 45, 45);
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/****cat*****/
+
+#apiBox.cat {
+  padding: 14px;
+  padding-top: 0px;
+}
+
+#apiBox.cat img {
+  border-radius: 5px;
+  height: 150px;
+  width: 150px;
+}
+
+#clicca  {
+  margin-top: 80px;
+  margin-bottom: 20px;
+
+}
+  /*mobile*/
+
+@media (max-width: 625px) {
+  header {
+    height: 300px;
+    line-height: 1.2;
+  }
+  
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 650px) {
+  #links {
+    display: none;
+  }
+}
